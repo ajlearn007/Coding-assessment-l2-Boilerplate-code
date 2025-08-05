@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
-    <title>Coding Assesment L2 boilerplate</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Bundle Builder</title>
 </head>
-
 <body>
-    <!-- Your code goes here -->
-    <div class="container">
-       
-    </div>
-    <!-- Happy coding 😊 -->
-    <script src="./script.js"></script>
-</body>
 
+  <header>
+    <h1 class="title">Buy 3 and Save 30%</h1>
+  </header>
+
+  <main class="container">
+    <!-- Product Grid -->
+    <section class="product-grid" id="productGrid"></section>
+
+    <!-- Sidebar -->
+    <aside class="bundle-sidebar">
+      <h2>Create a Bundle</h2>
+      <p class="instruction">Add at least 3 products and save <strong>30%</strong>.</p>
+
+      <div class="progress-container">
+        <span id="progressCount">0/3 added</span>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+
+      <ul class="selected-products" id="selectedList"></ul>
+
+      <div class="summary">
+        <p><strong>Discount:</strong> - ₹<span id="discountAmount">0</span></p>
+        <p><strong>Subtotal:</strong> ₹<span id="subtotal">0</span></p>
+      </div>
+
+      <button id="bundleBtn" disabled>Add Bundle to Cart</button>
+    </aside>
+  </main>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <h2>Your Bundle</h2>
+      <ul id="cartItems"></ul>
+      <p><strong>Discount:</strong> ₹<span id="cartDiscount">0</span></p>
+      <p><strong>Total:</strong> ₹<span id="cartTotal">0</span></p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
 </html>
