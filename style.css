@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f6f6f7;
+  background-color: #fff;
   color: #222;
 }
 
@@ -25,7 +25,7 @@ header {
 .container {
   display: flex;
   gap: 2rem;
-  padding: 1rem 2rem;
+  padding: 0 2rem 2rem;
   max-width: 1200px;
   margin: auto;
   flex-wrap: wrap;
@@ -40,19 +40,12 @@ header {
 
 .product-card {
   background-color: #fff;
-  border-radius: 10px;
+  border: 1px solid #ddd;
   padding: 1rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-2px);
 }
 
 .product-card img {
   width: 100%;
-  border-radius: 8px;
   margin-bottom: 0.75rem;
 }
 
@@ -72,12 +65,11 @@ header {
   justify-content: center;
   gap: 0.5rem;
   background: #fff;
-  border: 2px solid #000;
+  border: 1px solid #000;
   padding: 0.5rem;
-  border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .product-card button.selected {
@@ -88,23 +80,18 @@ header {
 .product-card button .icon {
   width: 16px;
   height: 16px;
-  transition: opacity 0.3s ease;
-}
-
-.product-card button .check {
-  display: inline-block;
 }
 
 .product-card button .hidden {
   display: none;
 }
 
+/* Sidebar */
 .bundle-sidebar {
   flex: 1;
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border: 1px solid #000;
   min-width: 280px;
   position: sticky;
   top: 1rem;
@@ -112,8 +99,8 @@ header {
 }
 
 .bundle-sidebar h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .instruction {
@@ -134,10 +121,8 @@ header {
 
 .progress-bar {
   background: #ddd;
-  height: 6px;
+  height: 4px;
   width: 100%;
-  border-radius: 3px;
-  overflow: hidden;
 }
 
 #progressFill {
@@ -165,12 +150,11 @@ header {
 .selected-products img {
   width: 50px;
   height: 50px;
-  border-radius: 5px;
   object-fit: cover;
 }
 
 .selected-products span {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   flex: 1;
 }
 
@@ -217,7 +201,6 @@ header {
   padding: 1rem;
   font-weight: 600;
   border: none;
-  border-radius: 5px;
   background: #ccc;
   color: #fff;
   cursor: not-allowed;
@@ -233,6 +216,7 @@ header {
   background: #222;
 }
 
+/* Modal */
 .cart-modal {
   display: none;
   position: fixed;
@@ -240,7 +224,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
   justify-content: center;
   align-items: center;
   z-index: 10;
@@ -249,34 +233,8 @@ header {
 .cart-modal .cart-content {
   background: #fff;
   padding: 2rem;
-  border-radius: 10px;
   width: 90%;
   max-width: 400px;
-}
-
-.cart-content h2 {
-  margin-bottom: 1rem;
-}
-
-.cart-content ul {
-  list-style: none;
-  margin-bottom: 1rem;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.cart-content ul li {
-  margin-bottom: 0.5rem;
-}
-
-.cart-content button {
-  padding: 0.75rem 1.5rem;
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
 }
 
 /* Responsive */
